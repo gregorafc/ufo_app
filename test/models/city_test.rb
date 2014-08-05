@@ -16,7 +16,7 @@ class CityTest < ActiveSupport::TestCase
 
     test "city should have contacts associations" do
       city_contacts = cities(:opole).contacts
-      assert_equal true, city_contacts, "City dont have associations"
+      assert city_contacts, "City dont have associations"
     end
 
 
