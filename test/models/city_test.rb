@@ -7,4 +7,11 @@ class CityTest < ActiveSupport::TestCase
       assert_equal true, city.save, "City save"      
     end
 
+    test "city should have uniqe name" do
+      city = cities(:opole).city_name
+      dub = City.new(city_name: city)
+      assert_equal false, dub.save, "Save with same city_name"
+      assert dub.errors.messages[:city_name], "No errors"
+    end
+
 end
