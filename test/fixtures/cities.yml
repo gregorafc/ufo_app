@@ -1,11 +1,15 @@
 opole:
+  id: 1
   city_name: Opole
 
 bydgoszcz:
+  id: 2
   city_name: Bydgoszcz
 
 zakopane:
+  id: 3
   city_name: Zakopane
 
 sopot:
+  id: 4
   city_name: Sopot

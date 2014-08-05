@@ -1,0 +1,14 @@
+contact_1:
+  date_contact: '2012-03-03'
+  object_number: '3'
+  city_id: 1
+
+contact_2:
+  date_contact: '2013-03-12'
+  object_number: '1'
+  city_id: 1
+
+contact_3:
+  date_contact: '2014-02-13'
+  object_number: '4'
+  city_id: 2
