@@ -1,7 +1,10 @@
 require 'test_helper'
 
 class CityTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+
+    test "city sholud save" do 
+      city = City.new(city_name: "Ustka")
+      assert_equal true, city.save, "City save"      
+    end
+
 end
