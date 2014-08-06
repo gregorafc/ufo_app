@@ -1,2 +1,25 @@
-<h1>Cities#show</h1>
-<p>Find me in app/views/cities/show.html.erb</p>
+<h1>Odwiedziny UFO dla miasta <%= @city.city_name %></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Data odwiedzin</th>
+      <th>Ilosc obiektow</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @city.contacts.each do |contact| %>
+      <tr>
+        <td><%= contact.date_contact %></td>
+        <td><%= contact.object_number %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<h2>Podsumowanie</h2>
+  <p>Ilosc kontaktow: <%= @city.contacts.count %></p>
+  <p>Ilosc obiektow: <%= @city.sum_object %></p>
+
+<%= link_to 'Powrot', cities_path %>
+
