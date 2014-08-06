@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'cities/index'
+
+  get 'cities/show'
+
+  get 'cities/new'
+
+  get 'cities/create'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
