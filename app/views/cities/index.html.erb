@@ -14,6 +14,7 @@
         <td><%= city.city_name %></td>
         <td><%= city.contacts.count %></td>
         <td><%= city.sum_object %></td>
+        <td><%= link_to 'Podglad', city_path(city) %>
     </tr>
       <% end %>
   </tbody>
