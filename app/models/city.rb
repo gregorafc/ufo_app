@@ -11,4 +11,8 @@ class City < ActiveRecord::Base
     s.map {|index| City.find(index)}
   end
 
+  def sum_object
+    contacts.map(&:object_number).inject(:+)
+  end
+
 end
