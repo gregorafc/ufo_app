@@ -1,5 +1,10 @@
 class CitiesController < ApplicationController
+  
+
+
+
   def index
+    @cities = City.sort_all
   end
 
   def show
