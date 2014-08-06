@@ -1,8 +1,6 @@
 class CitiesController < ApplicationController
   
 
-
-
   def index
     @cities = City.sort_all
   end
@@ -13,7 +11,7 @@ class CitiesController < ApplicationController
 
   def new
     @city = City.new
-    @contact = city.contacts.new
+    @contact = @city.contacts.new
   end
 
   def create
