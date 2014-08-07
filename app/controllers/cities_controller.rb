@@ -32,6 +32,10 @@ private
     params.require(:city).permit(:city_name)
   end
 
+  def contacts_params
+    params.require(:contact).permit(:date_contact, :object_number)
+  end
+
 end
 
 

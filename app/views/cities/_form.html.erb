@@ -1,10 +1,12 @@
 <div class="form-container">
   <%= form_for @contact, url: {action: "create"} do |f| %>
-    <%= f.label :city_id %><br>
+    <%= f.label :city_id, 'Miasto' %><br>
     <% cities_array = City.all.map {|city| city.city_name} %>
-    <%= select_tag(:city_id, options_for_select(cities_array)) %>
+    <%= select_tag(:city_id, options_for_select(cities_array)) %><br>
     <%= f.label :date_contact, 'Data kontaktu' %><br>
     <%= f.date_select :date_contact %><br>
+    <%= f.label :object_number, 'Liczba obiektów' %><br>
+    <%= f.number_field :object_number %><br>
     <%= f.submit 'Dodaj kontakt' %>
     <% end %>
 </div>
