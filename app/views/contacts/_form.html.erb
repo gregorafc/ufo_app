@@ -1,0 +1,11 @@
+<div class="form-contacts">
+  <%= form_for @contact do |f| %>
+    <%= f.label :city_id, 'Miasto' %><br>
+    <%= f.collection_select :city_id, @cities, :id, :city_name %><br>
+    <%= f.label :date_contact, 'Data kontaktu' %><br>
+    <%= f.date_select :date_contact %><br>
+    <%= f.label :object_number, 'Liczba obiektów' %><br>
+    <%= f.number_field :object_number %><br>
+    <%= f.submit 'Dodaj kontakt' %>
+    <% end %>
+</div>

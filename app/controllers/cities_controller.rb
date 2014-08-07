@@ -1,8 +1,9 @@
 class CitiesController < ApplicationController
-  
+  before_action :set_city, only: [:show]
 
   def index
-    @cities = City.sort_all
+   # @cities = City.sort_all
+   @cities = City.all
   end
 
   def show
@@ -11,7 +12,6 @@ class CitiesController < ApplicationController
 
   def new
     @city = City.new
-    @contact = @city.contacts.new
   end
 
   def create
@@ -23,6 +23,7 @@ class CitiesController < ApplicationController
     end
   end
 
+
 private
   def set_city
     @city = City.find(params[:id])
@@ -30,10 +31,6 @@ private
 
   def city_params
     params.require(:city).permit(:city_name)
-  end
-
-  def contacts_params
-    params.require(:contact).permit(:date_contact, :object_number)
   end
 
 end
