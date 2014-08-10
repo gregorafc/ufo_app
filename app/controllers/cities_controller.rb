@@ -2,8 +2,8 @@ class CitiesController < ApplicationController
   before_action :set_city, only: [:show]
 
   def index
-   # @cities = City.sort_all
-   @cities = City.all
+   @cities = City.sort_all
+   #@cities = City.all
   end
 
   def show
