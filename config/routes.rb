@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
 
-  get 'sessions/new'
-
   resources :users
+  resources :sessions
 
   get 'contacts/new'
 
