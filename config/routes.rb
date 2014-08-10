@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :users
+
   get 'contacts/new'
 
   get 'contacts/create'
