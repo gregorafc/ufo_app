@@ -1,5 +1,5 @@
 class ContactsController < ApplicationController
-
+  before_action :set_contact, only:[:create]
 
   def new
     @contact = Contact.new

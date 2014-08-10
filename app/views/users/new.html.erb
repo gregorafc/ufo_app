@@ -1,0 +1,27 @@
+<h1>Rejestracja</h1>
+
+  <%= form_for @user do |f| %>
+    <% if @user.errors.any? %>
+      <div class="error_messages">
+        <h2>Błędy w formularzu</h2>
+        <ul>
+          <% @user.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <%= f.label :login, 'Login' %><br>
+    <%= f.text_field :login %><br>
+
+    <%= f.label :password, 'Hasło' %><br>
+    <%= f.password_field :password %><br>
+
+    <%= f.label :password_confirmation, 'Potwierdzenia hasła' %><br>
+    <%= f.password_field :password_confirmation %><br>
+
+    <%= f.submit 'Potwierdź' %>
+
+<% end %>
+
