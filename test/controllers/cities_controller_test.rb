@@ -7,7 +7,7 @@ class CitiesControllerTest < ActionController::TestCase
   end
 
   test "should get show" do
-    get :show
+    get :show, id: 1
     assert_response :success
   end
 
@@ -17,8 +17,10 @@ class CitiesControllerTest < ActionController::TestCase
   end
 
   test "should get create" do
-    get :create
-    assert_response :success
+    assert_difference('City.count') do
+      get :create, city: { city_name: "Tarnów"}
+    end
+    assert_redirected_to city_path(assigns(:city)) 
   end
 
 end

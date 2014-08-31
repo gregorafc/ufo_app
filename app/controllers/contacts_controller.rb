@@ -1,5 +1,4 @@
 class ContactsController < ApplicationController
-  before_action :set_contact, only:[:create]
 
   def new
     @contact = Contact.new
@@ -16,10 +15,6 @@ class ContactsController < ApplicationController
   end
 
   private
-
-    def set_contact
-      @contact = Contact.find(params[:id])
-    end
 
     def contact_params
       params.require(:contact).permit(:date_contact, :object_number, :city_id)

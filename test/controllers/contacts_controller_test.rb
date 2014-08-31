@@ -7,8 +7,8 @@ class ContactsControllerTest < ActionController::TestCase
   end
 
   test "should get create" do
-    get :create
-    assert_response :success
+    get :create, contact: { date_contact: Date.today, object_number: 3, city_id: 1}
+    assert_redirected_to cities_path
   end
 
 end
