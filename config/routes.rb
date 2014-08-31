@@ -3,21 +3,11 @@ Rails.application.routes.draw do
   resources :users
   resources :sessions
 
-  get 'contacts/new'
-
-  get 'contacts/create'
-
   resources :cities
   resources :contacts
 
+  root 'cities#index'
 
-  get 'cities/index'
-
-  get 'cities/show'
-
-  get 'cities/new'
-
-  get 'cities/create'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
