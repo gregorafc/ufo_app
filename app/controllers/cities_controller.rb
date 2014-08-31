@@ -1,5 +1,7 @@
 class CitiesController < ApplicationController
   before_action :set_city, only: [:show]
+  before_filter :authorize, only: [:show, :new]
+
 
   def index
    @cities = City.sort_all
