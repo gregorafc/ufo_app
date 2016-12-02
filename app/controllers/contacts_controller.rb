@@ -1,5 +1,5 @@
 class ContactsController < ApplicationController
-  before_filter :authorize, only: [:new]
+  before_filter :authorize, only: [:new, :create]
 
   def new
     @contact = Contact.new
