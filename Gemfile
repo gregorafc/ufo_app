@@ -38,4 +38,9 @@ gem 'bcrypt', '~> 3.1.7'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'factory_girl_rails'
+gem "minitest-rails"
+
+group :test do
+	gem 'factory_girl_rails'
+	gem 'minitest-rails-capybara'
+end
