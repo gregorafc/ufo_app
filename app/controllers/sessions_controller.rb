@@ -9,7 +9,8 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to root_url, notice: "Zalogowany!"
     else
-    flash.now.alert = "Hasło albo email nieprawidłowe."
+      flash[:error] = "Login lub hasło nieprawidłowe."
+      render :new
     end
   end
 
