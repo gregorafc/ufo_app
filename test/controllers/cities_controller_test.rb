@@ -20,14 +20,4 @@ class CitiesControllerTest < ActionController::TestCase
     assert_equal 'Brak autoryzacji', flash[:alert]
   end
 
-
-=begin
-  test "should get create" do
-    assert_difference('City.count') do
-      get :create, city: { city_name: "Tarnów"}
-    end
-    assert_redirected_to city_path(assigns(:city)) 
-  end
-=end
-
 end
