@@ -10,7 +10,7 @@ RUN mkdir /ufo_app
 
 COPY . /ufo_app
 
-RUN cd /ufo_app; bundle install; rake db:create rake db:setup
+RUN cd /ufo_app; bundle install; bundle exec rake db:create db:schema:load --trace
 
 EXPOSE 3000
 
