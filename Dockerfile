@@ -1,6 +1,6 @@
 FROM ruby:2.3.3
 
-MAINTAINER gregor.afc@gamil.com
+MAINTAINER gregor.afc@gmail.com
 
 RUN apt-get update -qq && apt-get install -y build-essential
 
@@ -12,6 +12,6 @@ COPY . /ufo_app
 
 RUN cd /ufo_app; bundle install; bundle exec rake db:create db:schema:load --trace
 
-EXPOSE 3000
+EXPOSE 8080
 
-CMD cd /ufo_app && rails s
+CMD cd /ufo_app && rails server -p 0.0.0.0
