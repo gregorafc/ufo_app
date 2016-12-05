@@ -6,7 +6,7 @@ RUN apt-get update -qq && apt-get install -y build-essential
 
 RUN apt-get install -y node.js
 
-RUN makedir /ufo_app
+RUN mkdir /ufo_app
 
 COPY . /ufo_app
 
