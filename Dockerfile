@@ -12,6 +12,6 @@ COPY . /ufo_app
 
 RUN cd /ufo_app; bundle install; bundle exec rake db:create db:schema:load --trace
 
-EXPOSE 8080
+EXPOSE 3000
 
-CMD cd /ufo_app && rails server -p 0.0.0.0
+CMD cd /ufo_app && rails server -b 0.0.0.0 -p 3000
