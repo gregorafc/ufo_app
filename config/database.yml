@@ -22,4 +22,10 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  encoding: unicode
+  host: <%= ENV['DATABASE_URL'] %>
+  port: <%= ENV['DATABASE_PORT'] %>
+  database: ufo_app_prod
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
