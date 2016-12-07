@@ -10,8 +10,14 @@ RUN mkdir /ufo_app
 
 COPY . /ufo_app
 
-RUN cd /ufo_app; bundle install; bundle exec rake db:create db:schema:load --trace
+WORKDIR /ufo_app
+
+RUN bundle exec RAILS_ENV=production
+
+RUN bundle install
+
+RUN bundle exec rake db:migrate
 
 EXPOSE 3000
 
-CMD cd /ufo_app && rails server -b 0.0.0.0 -p 3000
+CMD rails server -b 0.0.0.0 -p 3000
