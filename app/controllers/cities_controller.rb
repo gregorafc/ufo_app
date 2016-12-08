@@ -4,8 +4,7 @@ class CitiesController < ApplicationController
 
 
   def index
-   @cities = City.sort_all
-   #@cities = City.all
+    @cities = City.all
   end
 
   def show
