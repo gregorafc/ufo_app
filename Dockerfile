@@ -12,7 +12,7 @@ COPY . /ufo_app
 
 WORKDIR /ufo_app
 
-RUN bundle exec RAILS_ENV=production
+RUN bundle exec rake assets:precompile
 
 RUN bundle install
 
