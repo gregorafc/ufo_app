@@ -20,4 +20,4 @@ RUN bundle exec rake db:migrate
 
 EXPOSE 3000
 
-CMD rails server -b 0.0.0.0 -p 3000
+CMD rails server -b 127.0.0.1 -p 3000
