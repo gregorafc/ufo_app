@@ -25,7 +25,6 @@ production:
   adapter: postgresql
   encoding: unicode
   host: <%= ENV['DATABASE_URL'] %>
-  port: <%= ENV['DATABASE_PORT'] %>
-  database: ufo_app_prod
+  database: <%= ENV['DATABASE_NAME'] %>
   username: <%= ENV['DATABASE_USERNAME'] %>
   password: <%= ENV['DATABASE_PASSWORD'] %>
