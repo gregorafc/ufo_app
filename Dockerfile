@@ -14,10 +14,8 @@ WORKDIR /ufo_app
 
 RUN bundle install
 
-RUN bundle exec rake assets:precompile
-
 RUN bundle exec rake db:migrate
 
 EXPOSE 3000
 
-CMD rails server -b 127.0.0.1 -p 3000
+CMD bin/rails server --port 3000 --binding 0.0.0.0
