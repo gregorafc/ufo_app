@@ -12,9 +12,9 @@ COPY . /ufo_app
 
 WORKDIR /ufo_app
 
-RUN bundle exec rake assets:precompile
-
 RUN bundle install
+
+RUN bundle exec rake assets:precompile
 
 RUN bundle exec rake db:migrate
 
