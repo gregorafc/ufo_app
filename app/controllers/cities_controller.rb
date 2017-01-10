@@ -1,6 +1,6 @@
 class CitiesController < ApplicationController
   before_action :set_city, only: [:show]
- #   before_filter :authorize, only: [:show, :new, :create]
+  before_filter :authorize, only: [:show, :new, :create]
 
 
   def index
