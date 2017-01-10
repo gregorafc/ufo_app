@@ -1,28 +1,35 @@
-<h1>APLIKACAJA - UFO<h1>
-<h2>Lista miast odwiedzonych przez UFO</h2>
+<div class='container-fluid'>
+  
+  <h1>APLIKACAJA - UFO<h1>
+  <h2>Lista miast odwiedzonych przez UFO</h2>
 
-<table>
-  <thead>
-    <tr>
-      <th>Miasto</th>
-      <th>Liczba spotkan</th>
-      <th>Liczba obiektow</th>
-      <th colspan="4"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <% @cities.each do |city| %>
-        <td><%= city.city_name %></td>
-        <td><%= city.contacts.count %></td>
-        <td><%= city.sum_object %></td>
-        <td><%= link_to 'Podglad', city_path(city) %></td>
-    </tr>
-      <% end %>
-  </tbody>
-</table>
 
-<%= link_to 'Dodaj nowe miasto', new_city_path %>
-<%= link_to 'Dodaj nowy kontakt', new_contact_path %>
+    <table class='table table-striped table-hover'>
+      <thead>
+        <tr>
+          <th>Miasto</th>
+          <th>Liczba spotkan</th>
+          <th>Liczba obiektow</th>
+          <th colspan="4"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @cities.each do |city| %>
+          <tr>
+            <td><%= city.city_name %></td>
+            <td><%= city.contacts.count %></td>
+            <td><%= city.sum_object %></td>
+            <td><%= link_to 'Podglad', city_path(city) %></td>
+          </tr>
+          <% end %>
+      </tbody>
+    </table>
+
+
+  <%= link_to 'Dodaj nowe miasto', new_city_path, class:'btn btn-primary' %>
+  <%= link_to 'Dodaj nowy kontakt', new_contact_path, class:'btn btn-success' %>
+
+</div>
+
 
 
