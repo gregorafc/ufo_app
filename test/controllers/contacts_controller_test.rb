@@ -2,7 +2,7 @@ require 'test_helper'
 
 class ContactsControllerTest < ActionController::TestCase
   
-  test "should get new" do
+  test "should not get new" do
   	get :new
     assert_response :redirect
     assert_redirected_to root_path
