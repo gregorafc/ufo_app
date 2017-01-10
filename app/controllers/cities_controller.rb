@@ -4,7 +4,7 @@ class CitiesController < ApplicationController
 
 
   def index
-    @cities = City.all
+    @cities = City.top
   end
 
   def show
