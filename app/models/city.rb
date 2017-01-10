@@ -2,7 +2,7 @@ class City < ActiveRecord::Base
 
   has_many :contacts
 
-#   validates :city_name, uniqueness: true
+#    validates :city_name, uniqueness: true
 
   scope :top, -> { order('contacts_count desc') }
   
