@@ -2,18 +2,3 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-table {
-  border-collapse: collapse;
-  text-align: left;
-  border-bottom: solid 3px black;
-}
-
-table th {
-  border-top: solid 3px black;
-  border-bottom: solid 3px black;
-}
-
-table tbody tr:nth-child(odd){
-  background-color: gray;
-}
